@@ -1,0 +1,125 @@
+\documentclass[UTF8,a4paper,11pt]{article}
+
+%-------------- 导入宏包 --------------%
+\usepackage{ctex}			% ctex：支持中文
+\usepackage{geometry}		% geometry：调整页边距用
+\usepackage{titlesec}
+\usepackage{enumitem}		% enumitem：调整列表环境的间距
+
+
+%-------------- 设置参数 --------------%
+%--------- 字体部分 ---------%
+\setCJKmainfont{宋体}									% 全局中文字体
+\setCJKfamilyfont{kai}{楷体}
+\newcommand{\kai}{\CJKfamily{kai}}
+\setCJKfamilyfont{hwzs}{华文中宋}
+\newcommand{\hwzs}{\CJKfamily{hwzs}}
+%--------- 标题部分 ---------%
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\Large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+%--------- 取消页码 ---------%
+\pagestyle{empty}
+%--------- 新建各级环境 ---------%
+%--------- 一行三格 ---------%
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubheading}[6]{
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{p{6cm}p{8cm}@{\extracolsep\fill}r}
+		#1 & #2 & #3 \\
+		\small #4 & \small #5 & \small #6 \\
+	\end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubheadingButOneLine}[3]{
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{p{6cm}p{8cm}@{\extracolsep\fill}r}
+		#1 & #2 & #3 \\
+	\end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+%--------- 一行一格 ---------%
+\newcommand{\resumeItem}[2]{\item{#1{: #2 \vspace{-10pt}}}}
+\newcommand{\resumeSubItemListStart}{\begin{itemize}[topsep=1pt,itemsep=1pt]}
+\newcommand{\resumeSubItem}[2]{\item\small{#1{: #2 \vspace{-2pt}}}}
+\newcommand{\resumeSubItemListEnd}{\end{itemize}\vspace{-5pt}}
+%--------- 其他 ---------%
+\geometry{top=0.4in, bottom=0.4in, left=0.5in, right=0.5in}		% 调整页边距
+\setlength{\tabcolsep}{-1pt}
+
+
+
+\begin{document}
+	%-------------- 前两行：姓名，邮箱，基本信息，手机号 --------------%
+	\noindent \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		\Huge 你的名字 & 邮箱：xxxxxxx@outlook.com\\
+		xx大学 \& xx学院 \& xxxx硕士研究生 & 手机：+86-xxx-xxxx-xxxx\\
+	\end{tabular*}
+	
+	\section{教育经历}
+	\resumeSubHeadingListStart
+    	\resumeSubheading
+			{野鸡大学}{野鸡学院}{北京}
+			{}{野鸡硕士生}{2013.09至今}
+    	\resumeSubheading
+			{野鸡中学}{野鸡学院}{北京}
+			{}{野鸡学士野鸡学；GPA: 0.00/4.00}{2011.09 $\sim$ 2013.07}    		
+		\resumeSubheading
+			{野鸡小学}{野鸡研究院}{北京}
+			{}{野鸡学士，野鸡双学位；GPA: 0.35/4.00}{2007.09 $\sim$ 2011.07}
+	\resumeSubHeadingListEnd
+
+	\section{校内活动}
+	\resumeSubHeadingListStart	
+    	\resumeSubheadingButOneLine{主席}{吃鸡协会}{2018.12至今}    	\resumeSubheadingButOneLine{团长}{386旅独立团}{2017.12至今}
+	\resumeSubHeadingListEnd
+	
+	\section{校外实习}
+	\resumeSubHeadingListStart
+		\resumeSubheadingButOneLine{绝地岛}{快递员}{2018.09 $\sim$ 2019.01}
+			\resumeSubItemListStart
+				\resumeSubItem{跳伞}{这对我其实是个跳伞模拟器。}
+				\resumeSubItem{成盒}{给大佬拉枪线，不辱使命。}
+			\resumeSubItemListEnd
+	\resumeSubHeadingListEnd
+
+	\section{助理研究}
+	\resumeSubHeadingListStart	
+		\resumeSubheadingButOneLine{386旅新一团}{战略观察员}{2018.01至今}
+			\resumeSubItemListStart
+				\resumeSubItem{工作内容}{打劫，坑蒙拐骗}
+				\resumeSubItem{工作项目}{二营长意大利炮拉来打一炮！}
+			\resumeSubItemListEnd
+	\resumeSubHeadingListEnd	
+
+	\section{专业技能}
+	\resumeSubHeadingListStart	
+		\resumeItem{吃饭}{贼能吃}
+		\resumeItem{睡觉}{一天能睡12小时那种}
+		\resumeItem{买买买}{手经常不见了}
+	\resumeSubHeadingListEnd
+\end{document} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
